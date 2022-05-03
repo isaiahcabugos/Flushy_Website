@@ -95,17 +95,19 @@
 			});
 
 	// Scrolly.
-		$('.scrolly').scrolly();
+	$('.scrolly').scrolly();
 
 	// Poptrox
-		$(function () {
+	$(function () {
 
-			var foo = $('#gallery');
-			foo.poptrox({
-
-			});
-
+		var foo = $('#gallery');
+		foo.poptrox({
+			usePopupNav: true,
+			usePopupCaption: true,
+			caption: { selector: ".revText", remove: true }
 		});
+
+	});
 
 	// Header (narrower + mobile).
 

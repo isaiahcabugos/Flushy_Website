@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flushy Login</title>
+
+    <!-- CSS Includes-->
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/create_account.css" id="theme-link"/>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../../images/Flushy-Logo-Favicon.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h1 style="font-size: 30px" class="form-text">
+          Login to Existing Account
+        </h1>
+        <hr class="form-line" />
+
+        <div class="form-input-group">
+          <input
+            class="input-field"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Email"
+          />
+        </div>
+
+        <div class="form-input-group">
+          <input
+            class="input-field"
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+        </div>
+
+        <button class="form-button" id="login">Login</button>
+        <p class="form_text">
+          <a href="create_account.html">Don't have an account? Sign in Here!</a>
+          <p id="e_msg"></p>
+        </p>
+      </div>
+      <button
+        style="background-color: rgba(243, 18, 18, 0.989)"
+        onclick="window.location.href='../../index.html';"
+      >
+        < Back
+      </button>
+    </div>
+
+    <script type="module" src="../js/firebase.login.js"></script>
+    
+    <!-- DARK MODE BUTTON -->
+    <button class="btn-toggle">Toggle Dark-Mode</button>
+    <script>
+      const btn = document.querySelector(".btn-toggle");
+      const theme = document.querySelector("#theme-link");
+
+      btn.addEventListener("click", function() {
+        if (theme.getAttribute("href") == "../css/create_account.css") {
+          theme.href = "../css/create_account_darkmode.css";
+        }
+        else {
+          theme.href = "../css/create_account.css";
+        }
+      });
+    </script>
+    <!--==============-->
+  </body>
+</html>
